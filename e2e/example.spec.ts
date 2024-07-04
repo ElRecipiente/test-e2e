@@ -117,30 +117,41 @@ test.describe('numbers', () => {
 
 })
 
+test.describe('numbers', () => {
 
-test('show operator + on click', async ({ page }) => {
+  test('show operator + on click', async ({ page }) => {
 
-  await page.getByRole('button', { name: 'sum' }).click();
-  await expect(page.locator('#screen')).toContainText('+');
+    await page.getByRole('button', { name: 'sum' }).click();
+    await expect(page.locator('#screen')).toContainText('+');
+  });
+  
+  test('show operator - on click', async ({ page }) => {
+  
+    await page.getByRole('button', { name: 'soustraction' }).click();
+    await expect(page.locator('#screen')).toContainText('-');
+  });
+  
+  test('show operator * on click', async ({ page }) => {
+  
+    await page.getByRole('button', { name: 'multiplication' }).click();
+    await expect(page.locator('#screen')).toContainText('*');
+  });
+  
+  test('show operator = on click', async ({ page }) => {
+  
+    await page.getByRole('button', { name: '=' }).click();
+    await expect(page.locator('#screen')).toContainText('=');
+  });
+
+  test('number show after click on operator', async ({ page }) => {
+    await page.getByRole('button', { name: 'sum' }).click();
+    await page.getByRole('button', { name: '1' }).click();
+    await expect(page.locator('#screen')).toContainText('1');
+  })
+
 });
 
-test('show operator - on click', async ({ page }) => {
 
-  await page.getByRole('button', { name: 'soustraction' }).click();
-  await expect(page.locator('#screen')).toContainText('-');
-});
-
-test('show operator * on click', async ({ page }) => {
-
-  await page.getByRole('button', { name: 'multiplication' }).click();
-  await expect(page.locator('#screen')).toContainText('*');
-});
-
-test('show operator = on click', async ({ page }) => {
-
-  await page.getByRole('button', { name: '=' }).click();
-  await expect(page.locator('#screen')).toContainText('=');
-});
 
 test('sum', async ({ page }) => {
 
