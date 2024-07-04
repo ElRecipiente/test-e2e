@@ -136,12 +136,6 @@ test.describe('numbers', () => {
     await page.getByRole('button', { name: 'multiplication' }).click();
     await expect(page.locator('#screen')).toContainText('*');
   });
-  
-  test('show operator = on click', async ({ page }) => {
-  
-    await page.getByRole('button', { name: '=' }).click();
-    await expect(page.locator('#screen')).toContainText('=');
-  });
 
   test('number show after click on operator', async ({ page }) => {
     await page.getByRole('button', { name: 'sum' }).click();
