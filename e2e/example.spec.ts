@@ -53,65 +53,70 @@ test.beforeEach(async ({ page }) => {
   await expect(page.locator('#screen')).toContainText('0');
 });
 
-test('number 0 show correct value', async ({ page }) => {
-  
-  await page.getByRole('button', { name: '0' }).click();
-  await expect(page.locator('#screen')).toContainText('0');
-});
+test.describe('numbers', () => {
 
-test('number 1 show correct value', async ({ page }) => {
+  test('number 0 show correct value', async ({ page }) => {
   
-  await page.getByRole('button', { name: '1' }).click();
-  await expect(page.locator('#screen')).toContainText('1');
-});
+    await page.getByRole('button', { name: '0' }).click();
+    await expect(page.locator('#screen')).toContainText('0');
+  });
+  
+  test('number 1 show correct value', async ({ page }) => {
+    
+    await page.getByRole('button', { name: '1' }).click();
+    await expect(page.locator('#screen')).toContainText('1');
+  });
+  
+  test('number 2 show correct value', async ({ page }) => {
+    
+    await page.getByRole('button', { name: '2' }).click();
+    await expect(page.locator('#screen')).toContainText('2');
+  });
+  
+  test('number 3 show correct value', async ({ page }) => {
+    
+    await page.getByRole('button', { name: '3' }).click();
+    await expect(page.locator('#screen')).toContainText('3');
+  });
+  
+  test('number 4 show correct value', async ({ page }) => {
+    
+    await page.getByRole('button', { name: '4' }).click();
+    await expect(page.locator('#screen')).toContainText('4');
+  });
+  
+  test('number 5 show correct value', async ({ page }) => {
+    
+    await page.getByRole('button', { name: '5' }).click();
+    await expect(page.locator('#screen')).toContainText('5');
+  });
+  
+  test('number 6 show correct value', async ({ page }) => {
+    
+    await page.getByRole('button', { name: '6' }).click();
+    await expect(page.locator('#screen')).toContainText('6');
+  });
+  
+  test('number 7 show correct value', async ({ page }) => {
+    
+    await page.getByRole('button', { name: '7' }).click();
+    await expect(page.locator('#screen')).toContainText('7');
+  });
+  
+  test('number 8 show correct value', async ({ page }) => {
+    
+    await page.getByRole('button', { name: '8' }).click();
+    await expect(page.locator('#screen')).toContainText('8');
+  });
+  
+  test('number 9 show correct value', async ({ page }) => {
+    
+    await page.getByRole('button', { name: '9' }).click();
+    await expect(page.locator('#screen')).toContainText('9');
+  });
 
-test('number 2 show correct value', async ({ page }) => {
-  
-  await page.getByRole('button', { name: '2' }).click();
-  await expect(page.locator('#screen')).toContainText('2');
-});
+})
 
-test('number 3 show correct value', async ({ page }) => {
-  
-  await page.getByRole('button', { name: '3' }).click();
-  await expect(page.locator('#screen')).toContainText('3');
-});
-
-test('number 4 show correct value', async ({ page }) => {
-  
-  await page.getByRole('button', { name: '4' }).click();
-  await expect(page.locator('#screen')).toContainText('4');
-});
-
-test('number 5 show correct value', async ({ page }) => {
-  
-  await page.getByRole('button', { name: '5' }).click();
-  await expect(page.locator('#screen')).toContainText('5');
-});
-
-test('number 6 show correct value', async ({ page }) => {
-  
-  await page.getByRole('button', { name: '6' }).click();
-  await expect(page.locator('#screen')).toContainText('6');
-});
-
-test('number 7 show correct value', async ({ page }) => {
-  
-  await page.getByRole('button', { name: '7' }).click();
-  await expect(page.locator('#screen')).toContainText('7');
-});
-
-test('number 8 show correct value', async ({ page }) => {
-  
-  await page.getByRole('button', { name: '8' }).click();
-  await expect(page.locator('#screen')).toContainText('8');
-});
-
-test('number 9 show correct value', async ({ page }) => {
-  
-  await page.getByRole('button', { name: '9' }).click();
-  await expect(page.locator('#screen')).toContainText('9');
-});
 
 test('show operator + on click', async ({ page }) => {
 
