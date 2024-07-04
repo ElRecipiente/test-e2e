@@ -191,21 +191,6 @@ test('change operator when other operator selected', async ({ page }) => {
 
 })
 
-
-test('test', async ({ page }) => {
-  await page.getByRole('button', { name: '0' }).click();
-  await page.getByRole('button', { name: '1' }).click();
-  await page.getByRole('button', { name: '2' }).click();
-  await page.getByRole('button', { name: '3' }).click();
-  await page.getByRole('button', { name: '4' }).click();
-  await page.getByRole('button', { name: '5' }).click();
-  await page.getByRole('button', { name: '6' }).click();
-  await page.getByRole('button', { name: '7' }).click();
-  await page.getByRole('button', { name: '8' }).click();
-  await page.getByRole('button', { name: '9' }).click();
-  await page.getByRole('button', { name: 'sum' }).click();
-  await page.getByRole('button', { name: 'soustraction' }).click();
-  await page.getByRole('button', { name: 'multiplication' }).click();
-  await page.getByText('0').first().click();
-  await page.getByRole('button', { name: '=' }).click();
+test('test red button =', async ({ page }) => {
+  await expect(page.getByRole('button', { name: '=' })).toHaveCSS('backgroud_color', 'red');
 });
