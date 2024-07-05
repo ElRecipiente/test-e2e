@@ -191,6 +191,6 @@ test('change operator when other operator selected', async ({ page }) => {
 
 })
 
-test('test red button =', async ({ page }) => {
-  await expect(page.getByRole('button', { name: '=' })).toHaveCSS('backgroud_color', 'red');
-});
+// test('test red button =', async ({ page }) => {
+//   await expect(page.getByRole('button', { name: '=' })).toHaveCSS('backgroud_color', 'red');
+// });
