@@ -73,7 +73,7 @@ function App() {
         <div className="numbers">
           {new Array(10)
             .fill("")
-            .map((e, i) => i)
+            .map((_e, i) => i)
             .map((e) => (
               <button id={e.toString()} onClick={() => handleNumClick(e)}>
                 {e}
